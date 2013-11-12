@@ -2,9 +2,6 @@ extern int signature_check_enabled;
 extern int script_assert_enabled;
 
 void
-write_recovery_version();
-
-void
 toggle_signature_check();
 
 void
@@ -41,9 +38,6 @@ int format_device(const char *device, const char *path, const char *fs_type);
 
 int format_unknown_device(const char *device, const char* path, const char *fs_type);
 
-void
-wipe_battery_stats();
-
 void create_fstab();
 
 int has_datadata();
@@ -61,6 +55,8 @@ int confirm_selection(const char* title, const char* confirm);
 int run_and_remove_extendedcommand();
 
 int verify_root_and_recovery();
+
+void write_recovery_version();
 
 void free_string_array(char** array);
 
